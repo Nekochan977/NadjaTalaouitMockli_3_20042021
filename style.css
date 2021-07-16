@@ -167,6 +167,7 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   align-content: space-between;
 }
 
@@ -178,8 +179,11 @@ header {
   border-radius: 20px;
   object-fit: contain;
   height: 15rem;
+  width: 20rem;
   background: #fff;
   box-shadow: -3px 3px 8px 3px rgba(27, 27, 27, 0.2);
+  transform: scale(1);
+  transition: transform 400ms;
 }
 .carte img {
   width: 100%;
@@ -187,8 +191,13 @@ header {
   object-fit: cover;
   border-radius: 20px 20px 0 0;
 }
+.carte:hover {
+  transform: scale(1.1);
+  box-shadow: -3px 3px 8px 9px rgba(3, 3, 3, 0.33);
+}
 
 .carte_desc {
+  position: relative;
   margin: 0.2rem 0 0.5rem 1rem;
 }
 .carte_desc h4 {
@@ -201,9 +210,9 @@ header {
 }
 
 .like {
-  position: relative;
+  position: absolute;
   left: 18rem;
-  bottom: 3.5rem;
+  bottom: 2.5rem;
   font-size: 1.2rem;
   color: #616161;
 }
@@ -212,18 +221,28 @@ header {
 }
 .like:hover .fas.fa-heart {
   display: unset;
-  color: linear-gradient(#FF79DA, #9356DC);
+}
+.like:hover {
+  background: #9356DC;
+  background: -webkit-linear-gradient(to right, #9356DC 0%, #FF79DA 100%);
+  background: -moz-linear-gradient(to right, #9356DC 0%, #FF79DA 100%);
+  background: linear-gradient(to right, #9356DC 0%, #FF79DA 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .new {
   position: absolute;
   top: 1rem;
-  left: 13.5rem;
+  left: 12.5rem;
   width: 7rem;
   padding: 0.5rem;
   text-align: center;
   background-color: #99E2D0;
+  border-radius: 5px;
   color: #278870;
+  box-shadow: -3px 3px 8px 3px rgba(27, 27, 27, 0.2);
 }
 
 /*FOOTER*/
