@@ -1,0 +1,346 @@
+$primary: #9356DC;
+$secondary: #FF79DA;
+$tertiary: #99E2D0;
+$gradient: linear-gradient($secondary, $primary);
+$main-background: #f8f8f8;
+@mixin main-shadow {
+    box-shadow: -3px 3px 8px 3px  rgba(27, 27, 27, 0.2);
+}
+
+
+$tittle-font: 'Shrikhand', cursive;
+$text-font: 'Roboto', sans-serif;
+
+.btn {
+    margin: 2rem;
+    padding: 1rem;
+    width: 15rem;
+    color: #fff;
+    font-weight: 600;
+    background: $gradient;
+    border-radius: 30px;
+}
+
+/*GENERAL STYLING*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $text-font;
+}
+
+#logo, h2 {
+    font-family: $tittle-font;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+    cursor: pointer;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    background: transparent;
+}
+
+h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-top: 2rem;
+}
+
+.fas {
+    margin-right: 2rem;
+}
+.fas.fa-heart {
+    display: none;
+    margin-right: unset;
+}
+
+
+/*HEADER*/
+
+header {
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem;
+    border-bottom: solid transparent;
+    @include main-shadow;
+}
+
+/*ICO-TEXT SECTION*/
+
+.ico-text {
+    display: flex;
+    margin-top: 0.2rem;
+    height: 7vh;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(230, 230, 230);
+    padding: 0.5rem;
+    color: rgb(79, 79, 79);
+    i {
+        margin-right: 1rem;
+        color: rgb(66, 66, 66);
+    }
+}
+
+/*SECTION1*/
+
+.section1 {
+    display: flex;
+    flex-direction: column;
+    height: max-content;
+    background-color: $main-background;
+    padding: 1rem 1rem 3rem 1rem;
+    align-items: center;
+    text-align: center;
+    p {
+        padding: 1rem 0.4rem;
+        color: rgb(97, 97, 97);
+        font-weight: 300;
+    }
+}
+
+.explore {
+    margin-top: 1rem;
+    width: 15rem;
+    background: $gradient;
+    border-radius: 30px;
+    @include main-shadow;
+    p {
+        color: #fff;
+        font-weight: 400;
+    }
+    
+}
+
+/*HOW SECTION*/
+
+.how {
+    width: 90%;
+    margin: auto;
+    height: max-content;
+}
+.how-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+.how-card {
+    position: relative;
+    display: flex;
+    border-radius: 15px;
+    align-items:  center;
+    margin: 1rem 0 0.5rem 0;
+    padding: 1.5rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+    background: $main-background;
+    @include main-shadow;
+    &:hover {
+        background: lighten($color: $primary, $amount: 35%);
+    }
+    &:hover {
+        i {
+            color: $primary;
+        }
+    }
+    .number {
+        background-color: $primary;
+        color: #fff;
+        font-weight: 300;
+        padding: 0.2rem 0.4rem;
+        border-radius: 50%;
+        position: absolute;
+        left: -0.5rem;
+    }
+}
+.how-card i {
+    // margin-right: 1rem;
+    color: rgb(133, 133, 133);
+    font-size: 1.2rem;
+}
+.how-card p {
+    color: rgb(61, 61, 61);
+}
+
+/*SECTION RESTAURANTS*/
+
+.restaurants {
+    height: max-content;
+    background: $main-background;
+    padding-bottom: 3rem;
+}
+.carte-container {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: space-between;
+}
+.carte {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-top: 2rem;
+    border-radius: 20px;
+    object-fit: contain;
+    height: 15rem;
+    background: #fff;
+    @include main-shadow;
+    img {
+        width: 100%;
+        height: 10rem;
+        object-fit: cover;
+        border-radius: 20px 20px 0 0;
+    }
+}
+.carte_desc {
+    margin: 0.2rem 0 0.5rem 1rem;
+    h4 {
+       padding: 0.5rem 0;
+    }
+    p {
+        font-weight: 300;
+        font-size: 1rem;
+        color: rgb(97, 97, 97);
+    }
+}
+.like {
+    position: relative;
+    left: 18rem;
+    bottom: 3.5rem;
+    font-size: 1.2rem;
+    color: rgb(97, 97, 97);
+    &:hover {
+        .far.fa-heart{
+            display: none;
+        }
+        .fas.fa-heart {
+            display: unset;
+            color: $gradient;
+        }
+    }
+}
+.new {
+    position: absolute;
+    top: 1rem;
+    left: 13.5rem;
+    width: 7rem;
+    padding: 0.5rem;
+    text-align: center;
+    background-color: $tertiary;
+    color: darken($color: $tertiary, $amount: 40);
+}
+
+/*FOOTER*/
+
+footer {
+    height: 30vh;
+    background: #3d3d3d;
+}
+.footer {
+    margin-left: 1rem;
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    font-size: 0.8rem;
+    a {
+        color: #fff;
+        padding: 0.2rem 0;
+    }
+    h2 {
+        margin-bottom: 1rem;
+    }
+}
+
+/****************
+MENU PAGE
+****************/
+
+.whole {
+    position: relative;
+}
+
+.photo {
+    object-fit: contain;
+    img {
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+.menu {
+    // position: absolute;
+    // top: 12rem;
+    width: 100%;
+    background: $main-background;
+    padding-top: 1rem;
+    border-radius: 15px 15px 0 0;
+    .menu-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        margin: auto;
+    }
+    h3 {
+        margin-top: unset;
+        font-weight: 300;
+        font-size: 1rem;
+        padding: 1rem 0;
+        color: rgb(97, 97, 97);
+    }
+    .love {
+        margin-left: 4rem;
+        font-size: 1.5rem;
+        color: rgb(97, 97, 97);
+        &:hover {
+            color: $gradient;
+            
+            .far.fa-heart{
+                display: none;
+            }
+            .fas.fa-heart {
+                display: unset;
+            }
+        }
+    }
+}
+
+
+.entree .plats .desserts {
+    display: flex;
+    justify-content: space-between;
+}
+.plat {
+    width: 21rem;
+    margin-top: 1rem;
+    padding: 0.5rem;
+    border-radius: 20px;
+    background: #fff;
+    @include main-shadow;
+    p {
+        font-weight: 300;
+        font-size: 1rem;
+        color: rgb(97, 97, 97);
+    }
+}
+.order {
+    @extend .btn;
+    @include main-shadow;
+}
+
+
+
