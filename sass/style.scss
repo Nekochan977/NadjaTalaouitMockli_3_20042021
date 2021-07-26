@@ -165,7 +165,7 @@ header {
     height: 7vh;
     justify-content: center;
     align-items: center;
-    background-color: rgb(230, 230, 230);
+    background-color: darken($color: $main-background, $amount: 5%);
     padding: 0.5rem;
     color: rgb(79, 79, 79);
     i {
