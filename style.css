@@ -79,7 +79,7 @@ h3 {
   border: 1rem solid transparent;
   border-color: #9356DC #FF79DA #99E2D0 #FF79DA;
   border-radius: 50%;
-  animation: loading 3.25s ease-in-out;
+  animation: loading 3.25s cubic-bezier(0.08, 0.3, 0.93, 0.69);
   z-index: -100;
   visibility: hidden;
 }

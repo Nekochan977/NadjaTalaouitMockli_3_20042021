@@ -107,7 +107,7 @@ h3 {
     border: 1rem solid transparent;
     border-color: $primary $secondary $tertiary $secondary;
     border-radius: 50%;
-    animation: loading 3.25s ease-in-out;
+    animation: loading 3.25s cubic-bezier(.08,.3,.93,.69);
     z-index: -100;
     visibility: hidden;
 }
