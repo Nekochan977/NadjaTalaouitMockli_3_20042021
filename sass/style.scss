@@ -18,6 +18,7 @@ $main-background: #f8f8f8;
 }
 
 
+
 $tittle-font: 'Shrikhand', cursive;
 $text-font: 'Roboto', sans-serif;
 
@@ -247,7 +248,6 @@ header {
     }
 }
 .how-card i {
-    // margin-right: 1rem;
     color: rgb(133, 133, 133);
     font-size: 1.2rem;
 }
@@ -408,10 +408,8 @@ MENU PAGE
         }
         .fas.fa-heart {
             display: unset;
+            @include heart;
         }
-    }
-    &:hover {
-       @include heart;
     }
 }
 .article-title {
@@ -428,19 +426,21 @@ MENU PAGE
 }
 .entree .plats .desserts {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
+
 .plat {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    // position: relative;
+    position: relative;
     width: 21rem;
     height: 5rem;
     margin-top: 1rem;
     padding: 0.5rem;
     border-radius: 20px;
     background: #fff;
+    cursor: pointer;
     @include main-shadow;
     transform: scale(1);
     animation: appear 1s ease-in-out;
@@ -460,17 +460,13 @@ MENU PAGE
     }
 }
 
-
-
-
 .plat-desc {
     font-weight: 300;
     font-size: 1rem;
     color: rgb(97, 97, 97);
     white-space: nowrap;
     text-overflow: ellipsis;
-    overflow: hidden;
-    
+    overflow: hidden; 
 }
 .add {
     width: 0;
@@ -480,9 +476,9 @@ MENU PAGE
     display: flex;
     justify-content: flex-end;
     background-color: $tertiary;
-    color: #fff;
-    
+    color: #fff;  
 }
+
 .fa-check {
     position: absolute;
     left: 50%;

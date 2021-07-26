@@ -372,8 +372,6 @@ MENU PAGE
 }
 .love:hover .fas.fa-heart {
   display: unset;
-}
-.love:hover {
   background: #9356DC;
   background: -webkit-gradient(linear, to right, #9356dc 0%, #FF79DA 100%);
   background: -webkit-linear-gradient(to right, #9356dc 0%, #FF79DA 100%);
@@ -400,19 +398,21 @@ MENU PAGE
 
 .entree .plats .desserts {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .plat {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+  position: relative;
   width: 21rem;
   height: 5rem;
   margin-top: 1rem;
   padding: 0.5rem;
   border-radius: 20px;
   background: #fff;
+  cursor: pointer;
   box-shadow: -3px 3px 8px 3px rgba(27, 27, 27, 0.2);
   transform: scale(1);
   animation: appear 1s ease-in-out;
