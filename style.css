@@ -405,6 +405,17 @@ MENU PAGE
   padding: 0.5rem 0.2rem 0.5rem 0.5rem;
 }
 
+.plat-desc {
+  font-weight: 300;
+  font-size: 1rem;
+  width: 18rem;
+  padding: 0 0.2rem 0.5rem 0.5rem;
+  color: #616161;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
 .plat {
   display: flex;
   justify-content: space-between;
@@ -433,15 +444,6 @@ MENU PAGE
     transform: scale(1);
   }
 }
-.plat-desc {
-  font-weight: 300;
-  font-size: 1rem;
-  color: #616161;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-
 .add {
   width: 0;
   height: 5rem;
