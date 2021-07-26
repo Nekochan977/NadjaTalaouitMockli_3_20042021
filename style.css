@@ -401,6 +401,10 @@ MENU PAGE
   justify-content: space-around;
 }
 
+.plat-title {
+  padding: 0.5rem 0.2rem 0.5rem 0.5rem;
+}
+
 .plat {
   display: flex;
   justify-content: space-between;
