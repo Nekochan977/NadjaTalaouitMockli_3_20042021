@@ -441,6 +441,16 @@ MENU PAGE
     text-overflow: ellipsis;
     overflow: hidden;
 }
+.add {
+    display: none; 
+}
+.fa-check {
+    display: none;
+}
+.price {
+    padding: 0.5rem;
+    font-weight: 600;
+}
 
 .plat {
     display: flex;
