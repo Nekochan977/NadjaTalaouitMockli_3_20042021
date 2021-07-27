@@ -478,7 +478,7 @@ MENU PAGE
             justify-content: flex-end;
             background-color: $tertiary;
             color: #fff;
-            animation: check 800ms ease-in-out;
+            animation: slidein 500ms linear;  
         }
         .fa-check {
             display: unset;
@@ -487,9 +487,9 @@ MENU PAGE
             color: $tertiary;
             border-radius: 50%;
             padding: 0.3rem;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
+            left: 33%;
+            top: 37%;
+            animation: check 700ms linear 0.2s;
         }
         .plat-desc {
             width: 14rem;
@@ -500,13 +500,31 @@ MENU PAGE
 
 @keyframes appear {
     from {
-        transform: scale(0);
+        opacity: 0;
     }
     to {
-        transform: scale(1);
+        opacity: 1;
     }
 }
 
+@keyframes slidein {
+    from {
+        width: 0;
+    }
+    to {
+        width: 4rem;
+    }
+}
+
+
+@keyframes check {
+    from {
+        transform: rotate(0deg);   
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
 
 .commander {
     padding: 3rem;
@@ -518,6 +536,10 @@ MENU PAGE
     font-size: 1rem;
     @extend .btn;
     @include main-shadow;
+    &:hover {
+        transform: scale(1.10);
+        box-shadow: -3px 3px 8px 9px  rgba(3, 3, 3, 0.33);
+    }
 }
 
 /*MEDIA QUERIES*/

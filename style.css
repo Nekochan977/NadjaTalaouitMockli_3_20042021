@@ -457,7 +457,7 @@ MENU PAGE
   justify-content: flex-end;
   background-color: #99E2D0;
   color: #fff;
-  animation: check 800ms ease-in-out;
+  animation: slidein 500ms linear;
 }
 .plat:hover .fa-check {
   display: unset;
@@ -466,9 +466,9 @@ MENU PAGE
   color: #99E2D0;
   border-radius: 50%;
   padding: 0.3rem;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  left: 33%;
+  top: 37%;
+  animation: check 700ms linear 0.2s;
 }
 .plat:hover .plat-desc {
   width: 14rem;
@@ -476,10 +476,26 @@ MENU PAGE
 
 @keyframes appear {
   from {
-    transform: scale(0);
+    opacity: 0;
   }
   to {
-    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes slidein {
+  from {
+    width: 0;
+  }
+  to {
+    width: 4rem;
+  }
+}
+@keyframes check {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
 .commander {
@@ -492,6 +508,10 @@ MENU PAGE
 .order {
   font-size: 1rem;
   box-shadow: -3px 3px 8px 3px rgba(27, 27, 27, 0.2);
+}
+.order:hover {
+  transform: scale(1.1);
+  box-shadow: -3px 3px 8px 9px rgba(3, 3, 3, 0.33);
 }
 
 /*MEDIA QUERIES*/
