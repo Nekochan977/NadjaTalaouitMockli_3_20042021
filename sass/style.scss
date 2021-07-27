@@ -458,19 +458,43 @@ MENU PAGE
     align-items: flex-end;
     position: relative;
     width: 21rem;
-    height: 5rem;
     margin-top: 1rem;
-    padding: 0.5rem;
     border-radius: 20px;
     background: #fff;
     cursor: pointer;
     @include main-shadow;
     transform: scale(1);
-    animation: appear 1s ease-in-out;
+    animation: appear 3s ease-in-out 1s;
     &:hover {
+        transform: scale(1.10);
+        box-shadow: -3px 3px 8px 9px  rgba(3, 3, 3, 0.33);
         .add {
             width: 4rem;
+            height: 4rem;
+            padding: 0.5rem;
+            border-radius: 0 20px 20px 0;
+            position: relative;
+            display: flex;
+            justify-content: flex-end;
+            background-color: $tertiary;
+            color: #fff;
+            animation: check 800ms ease-in-out;
         }
+        .fa-check {
+            display: unset;
+            position: absolute;
+            background-color: #fff;
+            color: $tertiary;
+            border-radius: 50%;
+            padding: 0.3rem;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .plat-desc {
+            width: 14rem;
+        }
+        
     }
 }
 
@@ -483,25 +507,6 @@ MENU PAGE
     }
 }
 
-
-.add {
-    width: 0;
-    height: 5rem;
-    margin-right: 5rem;
-    position: relative;
-    display: flex;
-    justify-content: flex-end;
-    background-color: $tertiary;
-    color: #fff;  
-}
-
-.fa-check {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%) rotate(0.5turn);
-
-}
 
 .commander {
     padding: 3rem;
