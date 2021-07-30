@@ -441,7 +441,7 @@ MENU PAGE
   cursor: pointer;
   box-shadow: -3px 3px 8px 3px rgba(27, 27, 27, 0.2);
   transform: scale(1);
-  animation: appear 3s ease-in-out 1s;
+  animation: appear 3s ease-in-out;
 }
 .plat:hover {
   transform: scale(1.1);
@@ -482,6 +482,18 @@ MENU PAGE
     opacity: 1;
   }
 }
+.plat1 {
+  animation-delay: 0s;
+}
+
+.plat2 {
+  animation-delay: 0.5s;
+}
+
+.plat3 {
+  animation-delay: 1s;
+}
+
 @keyframes slidein {
   from {
     width: 0;
