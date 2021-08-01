@@ -474,6 +474,18 @@ MENU PAGE
   width: 14rem;
 }
 
+.plat1 {
+  animation-delay: -0.7s;
+}
+
+.plat2 {
+  animation-delay: -0.5s;
+}
+
+.plat3 {
+  animation-delay: 0s;
+}
+
 @keyframes appear {
   from {
     opacity: 0;
@@ -482,18 +494,6 @@ MENU PAGE
     opacity: 1;
   }
 }
-.plat1 {
-  animation-delay: 0s;
-}
-
-.plat2 {
-  animation-delay: 0.5s;
-}
-
-.plat3 {
-  animation-delay: 1s;
-}
-
 @keyframes slidein {
   from {
     width: 0;
