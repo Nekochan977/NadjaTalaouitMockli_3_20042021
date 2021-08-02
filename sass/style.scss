@@ -613,7 +613,9 @@ MENU PAGE
         padding: 1rem;
         font-size: 1.5rem;
     }
-
+    .ico-text {
+        height: 9vh;
+    }
     .break {
         display: none;
     }
@@ -642,6 +644,10 @@ MENU PAGE
     }
     .new {
         left: 16.5rem;
+    }
+    .like {
+        left: 19rem;
+        bottom: 2.7rem;
     }
 
     /*MENU PAGE*/
