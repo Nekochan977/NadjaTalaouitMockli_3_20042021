@@ -3,6 +3,11 @@ $secondary: #FF79DA;
 $tertiary: #99E2D0;
 $gradient: linear-gradient($secondary, $primary);
 $main-background: #f8f8f8;
+@mixin elipsis {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
 @mixin main-shadow {
     box-shadow: -3px 3px 8px 3px  rgba(27, 27, 27, 0.2);
 }
@@ -366,6 +371,16 @@ footer {
 MENU PAGE
 ****************/
 
+#main-head {
+    position: relative;
+}
+
+.return {
+    position: absolute;
+    top: 42%;
+    left: 5%;
+    font-size: 1.2rem;
+}
 
 .photo {
     object-fit: contain;
@@ -428,8 +443,13 @@ MENU PAGE
     display: flex;
     justify-content: space-around;
 }
+.desc {
+    @include elipsis;
+}
 .plat-title {
     padding: 0.5rem 0.2rem 0.5rem 0.5rem;
+    font-size: 1rem;
+    @include elipsis;
 }
 .plat-desc {
     font-weight: 300;
@@ -437,9 +457,7 @@ MENU PAGE
     width: 18rem;
     padding: 0 0.2rem 0.5rem 0.5rem;
     color: rgb(97, 97, 97);
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
+    @include elipsis;
 }
 .add {
     display: none; 
@@ -458,13 +476,15 @@ MENU PAGE
     align-items: flex-end;
     position: relative;
     width: 21rem;
-    margin-top: 1rem;
+    margin-top: 1.2rem;
     border-radius: 20px;
     background: #fff;
     cursor: pointer;
     @include main-shadow;
     transform: scale(1);
     animation: appear 3s ease-in-out;
+    -moz-animation: appear 3s ease-in-out;
+    -webkit-animation: appear 3s ease-in-out;
     &:hover {
         transform: scale(1.10);
         box-shadow: -3px 3px 8px 9px  rgba(3, 3, 3, 0.33);
@@ -489,7 +509,7 @@ MENU PAGE
             padding: 0.3rem;
             left: 33%;
             top: 37%;
-            animation: check 700ms linear 0.2s;
+            animation: check 700ms linear;
         }
         .plat-desc {
             width: 14rem;
@@ -500,15 +520,42 @@ MENU PAGE
 
 .plat1 {
     animation-delay: -0.7s;
+    -moz-animation-delay: -0.7s;
+    -webkit-animation-delay: -0.7s;
 }
 .plat2{
     animation-delay: -0.5s;
+    -moz-animation-delay: -0.5s;
+    -webkit-animation-delay: -0.5s;
 }
 .plat3{
+    animation-delay: -0.2s;
+    -moz-animation-delay: -0.2s;
+    -webkit-animation-delay: -0.2s;
+}
+.plat4 {
     animation-delay: 0s;
+    -moz-animation-delay: 0s;
+    -webkit-animation-delay: 0s;
 }
 
+@-moz-keyframes appear {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
 
+@-webkit-keyframes appear {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
 
 @keyframes appear {
     from {
@@ -531,9 +578,11 @@ MENU PAGE
 
 @keyframes check {
     from {
+        opacity: 0;
         transform: rotate(0deg);   
     }
     to {
+        opacity: 1;
         transform: rotate(360deg);
     }
 }
@@ -591,6 +640,9 @@ MENU PAGE
     .carte {
         width: 24rem;
     }
+    .new {
+        left: 16.5rem;
+    }
 
     /*MENU PAGE*/
 
@@ -607,6 +659,7 @@ MENU PAGE
         height: 24rem;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
+        align-items: flex-start;
     }
     footer {
         height: max-content;

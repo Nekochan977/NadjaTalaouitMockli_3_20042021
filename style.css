@@ -330,6 +330,17 @@ footer {
 /****************
 MENU PAGE
 ****************/
+#main-head {
+  position: relative;
+}
+
+.return {
+  position: absolute;
+  top: 42%;
+  left: 5%;
+  font-size: 1.2rem;
+}
+
 .photo {
   object-fit: contain;
   height: 25rem;
@@ -401,8 +412,18 @@ MENU PAGE
   justify-content: space-around;
 }
 
+.desc {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
 .plat-title {
   padding: 0.5rem 0.2rem 0.5rem 0.5rem;
+  font-size: 1rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .plat-desc {
@@ -435,13 +456,15 @@ MENU PAGE
   align-items: flex-end;
   position: relative;
   width: 21rem;
-  margin-top: 1rem;
+  margin-top: 1.2rem;
   border-radius: 20px;
   background: #fff;
   cursor: pointer;
   box-shadow: -3px 3px 8px 3px rgba(27, 27, 27, 0.2);
   transform: scale(1);
   animation: appear 3s ease-in-out;
+  -moz-animation: appear 3s ease-in-out;
+  -webkit-animation: appear 3s ease-in-out;
 }
 .plat:hover {
   transform: scale(1.1);
@@ -468,7 +491,7 @@ MENU PAGE
   padding: 0.3rem;
   left: 33%;
   top: 37%;
-  animation: check 700ms linear 0.2s;
+  animation: check 700ms linear;
 }
 .plat:hover .plat-desc {
   width: 14rem;
@@ -476,16 +499,44 @@ MENU PAGE
 
 .plat1 {
   animation-delay: -0.7s;
+  -moz-animation-delay: -0.7s;
+  -webkit-animation-delay: -0.7s;
 }
 
 .plat2 {
   animation-delay: -0.5s;
+  -moz-animation-delay: -0.5s;
+  -webkit-animation-delay: -0.5s;
 }
 
 .plat3 {
-  animation-delay: 0s;
+  animation-delay: -0.2s;
+  -moz-animation-delay: -0.2s;
+  -webkit-animation-delay: -0.2s;
 }
 
+.plat4 {
+  animation-delay: 0s;
+  -moz-animation-delay: 0s;
+  -webkit-animation-delay: 0s;
+}
+
+@-moz-keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 @keyframes appear {
   from {
     opacity: 0;
@@ -504,9 +555,11 @@ MENU PAGE
 }
 @keyframes check {
   from {
+    opacity: 0;
     transform: rotate(0deg);
   }
   to {
+    opacity: 1;
     transform: rotate(360deg);
   }
 }
@@ -567,6 +620,10 @@ MENU PAGE
     width: 24rem;
   }
 
+  .new {
+    left: 16.5rem;
+  }
+
   /*MENU PAGE*/
   .photo > img {
     height: 24rem;
@@ -584,6 +641,7 @@ MENU PAGE
     height: 24rem;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    align-items: flex-start;
   }
 
   footer {
