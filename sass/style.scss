@@ -46,7 +46,7 @@ $tittle-font: 'Shrikhand', cursive;
 
 /*GENERAL STYLING*/
 
-#logo, h2 {
+#logo {
     font-family: $tittle-font;
 }
 .fas {
@@ -81,17 +81,6 @@ button {
 }
 
 
-/*HEADER*/
-
-header {
-    display: flex;
-    justify-content: center;
-    padding: 0.5rem;
-    border-bottom: solid transparent;
-    @include main-shadow;
-}
-
-
 /*LOADER*/
 
 .loader-container {
@@ -118,12 +107,23 @@ header {
 }
 
 
+/*HEADER*/
+
+header {
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem;
+    border-bottom: solid transparent;
+    @include main-shadow;
+}
+
+
 /*ICO-TEXT SECTION*/
 
 .ico-text {
     display: flex;
     margin-top: 0.2rem;
-    height: 7vh;
+    height: 5vh;
     justify-content: center;
     align-items: center;
     background-color: darken($color: $main-background, $amount: 5%);
@@ -158,7 +158,13 @@ header {
         color: $iconAndText;
         font-weight: 300;
     }
+    .section1__title {
+        font-size: 1.4rem;
+        font-weight: 600;
+        margin-top: 2rem;
+    }
 }
+
 
 /*HOW SECTION*/
 
@@ -203,7 +209,7 @@ header {
         background-color: $primary;
         color: $fourth;
         font-weight: 300;
-        padding: 0.2rem 0.4rem;
+        padding: 0.1rem 0.4rem;
         border-radius: 50%;
         position: absolute;
         left: -0.5rem;
@@ -233,7 +239,7 @@ header {
         border-radius: 20px 20px 0 0;
     }
     &:hover {
-        transform: scale(1.10);
+        transform: scale(1.05);
         @include hover-shadow;
     }
 }
@@ -290,7 +296,7 @@ header {
     height: max-content;
     background: $main-background;
     padding-bottom: 3rem;
-    padding: 1rem;
+    padding: 0.5rem 1rem 4rem 1rem;
 }
 
 
@@ -308,6 +314,7 @@ header {
         padding: 0.2rem 0;
     }
     h2 {
+        font-family: $tittle-font;
         margin-bottom: 1rem;
     }
 }
@@ -332,11 +339,11 @@ MENU PAGE
     margin-top: unset;
     font-weight: 300;
     font-size: 1rem;
-    padding: 1rem 0 0.5rem 0;
+    padding: 1.5rem 0 0.5rem 0;
     color: $iconAndText;
 }
 .commander {
-    padding: 3rem;
+    padding: 2rem;
     display: flex;
     justify-content: center;
     background-color: $main-background;
@@ -352,7 +359,8 @@ MENU PAGE
     display: none;
 }
 .header {
-    margin-left: 5rem;
+    font-family: $tittle-font;
+    margin-left: 1rem;
 }
 .love {
     margin-left: 4rem;
@@ -408,10 +416,8 @@ MENU PAGE
     transform: scale(1);
     @include transition;
     animation: appear 3s ease-in-out;
-    -moz-animation: appear 3s ease-in-out;
-    -webkit-animation: appear 3s ease-in-out;
     &:hover {
-        transform: scale(1.10);
+        transform: scale(1.05);
         @include hover-shadow;
         .add {
             width: 4rem;
@@ -442,6 +448,18 @@ MENU PAGE
         
     }
 }
+.plat1 {
+    animation-delay: -0.7s;
+}
+.plat2{
+    animation-delay: -0.5s;
+}
+.plat3{
+    animation-delay: -0.2s;
+}
+.plat4 {
+    animation-delay: 0s;
+}
 .plat-desc {
     font-weight: 300;
     font-size: 1rem;
@@ -455,26 +473,7 @@ MENU PAGE
     font-size: 1rem;
     @include elipsis;
 }
-.plat1 {
-    animation-delay: -0.7s;
-    -moz-animation-delay: -0.7s;
-    -webkit-animation-delay: -0.7s;
-}
-.plat2{
-    animation-delay: -0.5s;
-    -moz-animation-delay: -0.5s;
-    -webkit-animation-delay: -0.5s;
-}
-.plat3{
-    animation-delay: -0.2s;
-    -moz-animation-delay: -0.2s;
-    -webkit-animation-delay: -0.2s;
-}
-.plat4 {
-    animation-delay: 0s;
-    -moz-animation-delay: 0s;
-    -webkit-animation-delay: 0s;
-}
+
 .price {
     padding: 0.5rem;
     font-weight: 600;
@@ -497,29 +496,13 @@ MENU PAGE
     transform: scale(1);
     @include transition;
     &:hover {
-        transform: scale(1.10);
+        transform: scale(1.05);
         @include hover-shadow;
     }
 }
 /*KEYFRAMES*/
 
 @keyframes appear {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-@-moz-keyframes appear {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-@-webkit-keyframes appear {
     from {
         opacity: 0;
     }
@@ -549,7 +532,6 @@ MENU PAGE
         z-index: -10;
     }
 }
-
 
 @keyframes loading {
     from {
@@ -640,12 +622,13 @@ MENU PAGE
 
     .header {
         font-size: 2rem;
+        margin-left: 4.5rem;
     }
     .menu {
         margin-top: -4rem;
     }
     .menu-container {
-        height: 24rem;
+        height: 21rem;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         align-items: flex-start;
