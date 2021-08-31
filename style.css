@@ -519,6 +519,17 @@ MENU PAGE
     transform: rotate(360deg);
   }
 }
+@keyframes fill-heart {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @keyframes loader {
   from {
     opacity: 1;
@@ -553,17 +564,6 @@ MENU PAGE
     top: 20%;
     opacity: 0;
     z-index: -100;
-  }
-}
-@keyframes fill-heart {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 0.5;
-  }
-  100% {
-    opacity: 1;
   }
 }
 @keyframes slidein {
